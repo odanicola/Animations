@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         //scaling image to shrink
         ImageView bart = (ImageView) findViewById(R.id.imageView3);
         bart.animate().scaleX(0.5f).scaleY(0.5f).setDuration(2000);
+        doRotate(view);
     }
 
     @Override
