@@ -9,17 +9,26 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void doFade(View view){
+    public void doRotate(View view){
+        //Rotating image
         ImageView bart = (ImageView) findViewById(R.id.imageView3);
-        ImageView homer = (ImageView) findViewById(R.id.imageView);
-        bart.animate().alpha(0f).setDuration(2000);
-        homer.animate().alpha(1f).setDuration(2000);
+        bart.animate().rotation(1800f).setDuration(2000);
+
+    }
+
+    public void doScale(View view){
+        //scaling image to shrink
+        ImageView bart = (ImageView) findViewById(R.id.imageView3);
+        bart.animate().scaleX(0.5f).scaleY(0.5f).setDuration(2000);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*
+        ImageView bart = (ImageView) findViewById(R.id.imageView3);
+        bart.setTranslationX(-1000f);
+        */
     }
 }
